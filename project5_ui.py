@@ -96,7 +96,6 @@ class DisplayGame:
         width = self.width
         height = self.height
         #draw columns
-        #pygame.draw.rect(self.surface, blue, (start_x, start_y, width, height), 1)
         pygame.draw.line(self.surface, BLUE, ((1/6 * width), start_y), ((1/6 * width), height), 1)
         pygame.draw.line(self.surface, BLUE, ((2/6 * width), start_y), ((2/6 * width), height), 1)
         pygame.draw.line(self.surface, BLUE, ((3/6 * width), start_y), ((3/6 * width), height), 1)
@@ -148,25 +147,22 @@ class DisplayGame:
                 self._colors.append(PURPLE)
             elif letter == "W":
                 self._colors.append(WHITE)
-        #pygame.draw.rect(self.surface, self._colors[0], (column_1, 0, (1/6 * self.width), 1/13 * self.height))
-        #pygame.draw.rect(self.surface, self._colors[1], (column_1, 1/13 * self.height, (1/6 * self.width), 1/13 * self.height))
-        #pygame.draw.rect(self.surface, self._colors[2], (column_1, 2/13 * self.height, (1/6 * self.width), 1/13 * self.height))
-
+        
 
     def move_faller(self):
         #put faller
-        #if position[1] > 0:
-##        while self.faller._state == 'moving':
-##                
-##            for item in range(len(self.faller.position)):
-##                if self.faller.position[item][1] > 0:
-##                    col = 'COLUMN' + str(self.faller.position[item][0])
-##                    row = 'ROW' + str(self.faller.position[item][1])
-##                    print(col)
-##                    print(row)
-##                    pygame.draw.rect(self.surface, self._colors[item], col, row, (1/6 * self.width), 1/13 * self.height)
-##            
-##                    
+      if position[1] > 0:
+       while self.faller._state == 'moving':
+               
+           for item in range(len(self.faller.position)):
+               if self.faller.position[item][1] > 0:
+                   col = 'COLUMN' + str(self.faller.position[item][0])
+                   row = 'ROW' + str(self.faller.position[item][1])
+                   print(col)
+                   print(row)
+                   pygame.draw.rect(self.surface, self._colors[item], col, row, (1/6 * self.width), 1/13 * self.height)
+           
+                   
            self.faller.move()
 
 
@@ -205,16 +201,11 @@ class DisplayGame:
 
 
         pygame.display.flip()
-                    #don't know what should do yet whoops
+                   
         
                 
                             
-        #each list is a column
-        #first figure how to print board
-
-        #so printing the board...
-        #
-
+     
     
 
 
